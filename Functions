@@ -1,0 +1,111 @@
+##3. WAP TO GET THE FOLLOWING OUTPUT
+# LIST_ = [12, 0.0, 'HELLO', [], 9-9j]
+# OUT = [True, False, True, False, True]
+
+
+def listTF():
+    LIST= [12, 0.0, 'HELLO', [], 9-9j]
+    OUT = []
+
+    for object in LIST:
+        if type(object) == int or type(object) == float:
+            OUT.append(True)
+        else:
+            OUT.append(False)
+    print(OUT)
+listTF()
+
+
+##2. WAP TO FIND THE SUM OF ALL THE INDIVIDUAL DIGITS PRESENT IN THE GIVEN INTEGER NUMBER ONLY IF THE DIGIT IS EVEN
+# 123456 ==> 2 + 4 + 6 ==>12
+
+def sumofdigit():
+    digit=(input('enter digits:'))
+    sum=0
+    
+    for i in digit:
+        num=int(i)
+        if num % 2== 0:
+            sum +=num
+        else:
+            continue
+    print(sum)
+sumofdigit()
+
+
+SAME PROGRAM IN FUNCTIONS WITH ARGUMENTS ##############################33
+
+def sumofdigit(digit):
+    sum=0
+    for i in str(digit):
+        num=int(i)
+        if num % 2== 0:
+            sum +=num
+        else:
+            continue
+    print(sum)
+sumofdigit(15223)
+
+
+
+
+
+
+
+##2. WAP TO CHECK THE GIVEN NUMBER IS NEON NUMBER OR NOT
+
+
+    #check sum of input
+    #storing square in square num
+   #if square is initial #
+ 
+
+
+
+def neon_number():
+    number = int(input('enter the number: '))
+    sum_digit = 0
+    square = number ** 2
+    for digit in str(square):
+        sum_digit += int(digit)
+    if sum_digit == number:
+        return 'the number is neon'
+    else:
+        return 'the number is not neon'
+# print(neon_number())
+
+
+
+
+
+
+
+
+
+
+
+## WAP TO GET FOLLOWING OUTPUT
+# STRING = 'ONE EIGHT THREE'  OUTPUT: 12
+
+def str_into_int(string):
+    out = 0
+    dict_ = {'zero':0, 'one':1, 'two':2, 'three':3, 'four':5, 'five':5, 'six':6, 'seven':7, 'eight':8, 'nine':9}
+    splited_string = string.split()
+    for element in splited_string:
+        out += dict_[element]
+    return out
+# print(str_into_int('one eight three'))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
