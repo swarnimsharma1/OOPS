@@ -1,0 +1,56 @@
+## WAP TO PRINT THE ELEMENT PRESENT AT EVEN INDEX
+# list_ = ['youtube', 'gmail', 'email', 'facebook', 'whatsapp', 'instagram']
+
+list_ = ['youtube', 'gmail', 'email', 'facebook', 'whatsapp', 'instagram']
+for number, item in enumerate(list_):
+    if number%2==0:
+        print(number, item)
+
+
+## WAP TO PRINT THE ELEMENTS PRESENT AT ODD INDEX ONLY IF IT STARTSWITH VOWEL
+# list_ = ['youtube', 'gmail','YAHOO', 'email', 'facebook', 'whatsapp', 'instagram']
+list_ = ['youtube', 'gmail','YAHOO', 'email', 'facebook', 'whatsapp', 'instagram']
+for number, item in enumerate(list_):
+    if number%2!=0 and item[0] in'AEIOUaeiou':
+        print(number, item)
+    
+
+
+
+## WAP TO CREATE THE DICTIONARY BY USING GIVEN LIST
+# list_ = ['youtube', 'gmail','YAHOO', 'email', 'facebook', 'whatsapp', 'instagram']
+# _list = [1,2,3,5]
+
+list_ = ['youtube', 'gmail','YAHOO', 'email', 'facebook', 'whatsapp', 'instagram']
+_list = [1,2,3,5]
+Dict={}
+for char,num in zip(list_, _list):
+    Dict[char]=num
+print(Dict)
+
+
+## WAP TO CREATE THE DICTIONARY BY USING GIVEN LIST
+# list_ = ['youtube', 'gmail','YAHOO', 'email', 'facebook', 'whatsapp', 'instagram']
+# _list = [1,2,3,5]
+
+list_ = ['youtube', 'gmail','YAHOO', 'email', 'facebook', 'whatsapp', 'instagram']
+_list = [1,2,3,5]
+Dict={}
+from itertools import zip_longest
+for char, num in zip_longest(list_, _list , fillvalue = 0):
+   Dict[char]=num
+print(Dict)
+
+
+
+##8. find the longest non-repeated word in the string
+string = 'this is programming language and programming is fun'
+word_length_pair = {word:len(word) for word in string.split() if string.split().count(word) == 1}
+print(word_length_pair)
+print(sorted(word_length_pair.items(), key = lambda item:item[-1])[-1])   ## longest sub-string
+print(sorted(word_length_pair.items(), key = lambda item:item[-1])[0])    ## least sub- string
+
+
+
+
+
