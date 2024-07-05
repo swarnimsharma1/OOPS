@@ -1,0 +1,214 @@
+# lambda: we use lamda expression to write the simple program
+##syntax:
+# var = lambda arg1, arg2,..: expression
+# print(var(val1, val2,...))
+
+## the syntax for lambda expression when the program has both if and else
+## syntax: ifelse
+# var = lambda args:TSB if condition else FSB
+
+## map(): it helps to execute same set of instruction on each and eveny element of the collection
+## syntax: 
+# var = map(fname, collections)
+# print(list(var))
+
+
+## filter: it is used to extract the required data item from the collection
+## syntax:
+# var = filter(fname, collections)
+# print(list(var))
+
+##############################################################################################################################
+
+
+##1 WAP TO CHECK THE STRING IS PALINDROME OR NOT 
+palindrome = lambda string: 'the given data is palindrome' if  string == string[::-1] else 'not palindrome'
+print(palindrome('eye'))
+
+
+##2 WAP TO CHECK THE CHAR PRESENT IN STRING OR NOT
+specialchar = lambda string: 'the given data has Special Char' if not(string.isalnum()) else 'no special char present'
+print(specialchar('e1=*2ye'))
+
+
+##############IF ELSE USING LAMBDA #######################
+
+##3 Practice:  IF IS LOWERCASE   WAP TO PRINT THE ASCII VALUE OF THE CHARACTER ELSE GET THE REVERSE OF THE ACSII VALUE
+Doubt= Output is a little weird, getting A Output= 65  which is not the reverse//  correct:   a Output 97
+computation = lambda string: ord(string) if string.islower() else ord(string[::-1])
+print(computation('1'))
+
+
+Correct: 
+## WAP TO PRINT THE ASCII VALUE OF THE CHARACTER IF IS LOWERCASE ELSE GET THE REVERSE OF THE ACSII VALUE
+
+check_char =  lambda char:ord(char) if char.islower() else int(str(ord(char))[::-1])
+print(check_char('A'))
+
+
+
+##4 WAP TO CHECK THE GIVEN STRING IS KEYWORD OR NOT
+## Doubt: not working this one
+
+Before chatgpt:
+keyword = lambda string: string.iskeyword()
+print(keyword('list'))
+OR
+
+
+CORRECT:
+import keyword
+check_keyword = lambda string:'the string is keyword' if string in keyword.kwlist else 'the string is not keyword'
+print(check_keyword('lambda'))
+
+
+Practice: Wrong DONT DO THIS
+works but lower upper case problem
+pythonkeywords = ['False', 'True', 'None', 'and', 'as', 'assert', 'async', 'await', 
+                   'def', 'del', 'elif', 'else', 'break', 'class', 'continue', 
+                   'except', 'finally', 'for', 'from', 'global', 'if', 'import', 
+                   'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 
+                   'return', 'try', 'while', 'with', 'yield']
+
+keyword = lambda string: "True, input is a keyword" if string in pythonkeywords else "not a keyword"
+print(keyword('list'))
+print(keyword('true')) #= shows not a pythonkeyword due to upper lower case 
+print(keyword('True'))
+
+
+
+
+
+
+
+#################### MAP ##########################33
+
+
+
+
+##5 WAP TO GET THE FOLLOWING OUTPUT
+# string = 'hii hello how are you'
+# out = [3, 5, 3, 3, 3]
+
+String = 'hii hello how are you'
+print(list(map(lambda string: len(string), String.split())))
+
+OR
+
+countString = lambda string: len(string)
+out = map(countString,  String.split())
+print(list(out))
+
+
+
+
+
+##6 WAP TO GET THE FOLLOWING OUTPUT
+list_ = [56, 8.7, [1,2,4], 'helloo', 9-9j, [1,2,3,4]]
+# out = [1, 1, 3, 6, 1, 4]
+
+outputlist = lambda item: len(item) if type(item) in (str,list)  else 1
+print(list(map(outputlist, list_)))
+
+
+
+
+
+############### FILTER #################
+
+
+## WAP TO GET ALL THE PALINDROME NUMBERS IN THE RANGE 10 TO 100
+
+
+print(list(filter(lambda number: str(number) == str(number)[::-1], range(10, 101))))
+
+
+## WAP TO GET THE SUM OF ONLY THE POSITIVE NUMBER IN THE GIVEN LIST OF INTEGER INPUT
+print(sum(list(filter(lambda number: number if number > 0 else 0, [1,2,-6,-8,5])))
+
+
+## TAKE A LIST OF STRING INPUT, CREATE A NEW LIST THAT CONSISTS OF ONLY THE EVEN LENGTH STRING
+print(list(filter(lambda string: len(string)%2==0,['apple','banana','kiwi','orange','mango','papaya'])))
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
