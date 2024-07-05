@@ -1,0 +1,41 @@
+
+## WAP TO YIELD ALL THE STRING WHICH STARTS WITH VOWEL
+
+def startsvowel(String):
+    vowel = []
+    for char in String:
+        if char[0] in'AEIOUaeiou':
+            vowel.append(char)
+            yield vowel
+
+print(list(startsvowel('wgguiuiuipoioetsaew')))
+
+
+## WAP TO GET THE FOLLOWING OUTPUT
+# list_ = [4.5, 77, 'python', 5-8j, 'java']
+# out: {'python':'pn', 'java':'ja'}
+
+
+list_ = [4.5, 77, 'python', 5-8j, 'java']
+
+def firstlast(list):
+    for element in list:
+        if type(element) == str:
+            yield (element, element[0] + element[-1])
+print(dict(firstlast(list_)))
+
+
+## TAKE A LIST OF STRING INPUT, IF THE STRING HAVING ODD NUMBER OF CHARACTER GET THE REVERSE STRING, ELSE GET THE STRING AS IS
+
+def oddreverse(list):
+    for string in list:
+        if type(string)== str:
+            if len(string) % 2 == 1:
+                yield string[::-1]
+            else:
+                yield string
+        else:
+            yield string
+
+# llist = ['apple', 'banana', 123, 'pear', 'grape']
+# print(list(oddreverse(llist)))
